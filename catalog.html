@@ -20,7 +20,7 @@
         </form>
         <ul class="auth-list">
           <li class="auth-list-item">
-            <a href="#" class="login-link">Войти</a>
+            <a href="#" class="profile-link">Коля Петухов</a>
           </li>
           <li class="auth-list-item active-auth-item">
             <a href="#" class="logout-link">Выйти</a>
@@ -78,28 +78,31 @@
           </fieldset>
           <fieldset class="filters-category">
             <h3 class="filters-category-header">Цвет</h3>
-            <ul class="color-list">
-              <li class="color-list-item">
-                <label>
-                  <input type="checkbox">
-                  Черный
-                </label>
-                <label>
-                  <input type="checkbox">
-                  Белый
-                </label>
-                <label>
-                  <input type="checkbox">
-                  Синий
-                </label>
-                <label>
-                  <input type="checkbox">
-                  Красный
-                </label>
-                <label>
-                  <input type="checkbox">
-                  Розовый
-                </label>
+            <ul class="filters-color-list">
+              <li class="filters-color-list-item">
+                <span class="visually-hidden">Показать товары черного цвета.</span>
+                <input class="filters-checkbox" type="checkbox" id="color-black-checkbox" name="color" value="black">
+                <label class="filters-label" for="color-black-checkbox">Черный</label>
+              </li>
+              <li>
+                <span class="visually-hidden">Показать товары белого цвета.</span>
+                <input class="filters-checkbox" type="checkbox" id="color-white-checkbox" name="color" value="white">
+                <label class="filters-label" for="color-white-checkbox">Белый</label>
+              </li>
+              <li>
+                <span class="visually-hidden">Показать товары синего цвета.</span>
+                <input class="filters-checkbox" type="checkbox" id="color-blue-checkbox" name="color" value="blue">
+                <label class="filters-label" for="color-blue-checkbox">Синий</label>
+              </li>
+              <li>
+                <span class="visually-hidden">Показать товары красного цвета.</span>
+                <input class="filters-checkbox" type="checkbox" id="color-red-checkbox" name="color" value="red">
+                <label class="filters-label" for="color-red-checkbox">Красный</label>
+              </li>
+              <li>
+                <span class="visually-hidden">Показать товары розового цвета.</span>
+                <input class="filters-checkbox" type="checkbox" id="color-pink-checkbox" name="color" value="pink">
+                <label class="filters-label" for="color-pink-checkbox">Розовый</label>
               </li>
             </ul>
           </fieldset>
@@ -126,37 +129,47 @@
             <select class="select-control">
               <option selected>Популярные</option>
             </select>
-            <ul class="sort-order-btns">
-              <li class="sort-asc-icon"></li>
-              <li class="sort-desc-icon"></li>
-            </ul>
+            <div class="sort-order-btns">
+              <h3 class="visually-hidden">Порядок сортировки</h3>
+              <button class="sort-asc-icon">Сортировка по возрастанию</button>
+              <button class="sort-desc-icon">Сортировка по убыванию</button>
+            </div>
         </div>
         <ul class="products-list">
           <li class="products-list-item">
             <div class="product-image-container">
-              <img src="#" alt="Любительская селфи-палка.">
+              <img src="#" alt="Обычная селфи-палка с прикрепленным к ней смартфоном.">
             </div>
             <div class="product-info-container">
               <h3 class="product-name">Любительская селфи-палка</h3>
-              <div class="product-price">500 ₽</span>
+              <div class="product-price">500 ₽</div>
             </div>
           </li>
           <li class="products-list-item">
             <div class="product-image-container">
-              <img src="#" alt="Профессиональная селфи-палка.">
+              <img src="#" alt="Профессиональная селфи-палка большого диаметра и с хорошим держателем для фото-устройства.">
             </div>
             <div class="product-info-container">
               <h3 class="product-name">Профессиональная селфи-палка</h3>
-              <div class="product-price">2500 ₽</span>
+              <div class="product-price">1500 ₽</div>
             </div>
           </li>
           <li class="products-list-item">
             <div class="product-image-container">
-              <img src="#" alt="Непотопляемая селфи-палка.">
+              <img src="#" alt="Водонепроницаемая селфи-палка с ремешком для крепления на руке.">
+            </div>
+            <div class="product-info-container">
+              <h3 class="product-name">Непотопляемая селфи-палка</h3>
+              <div class="product-price">2500 ₽</div>
+            </div>
+          </li>
+          <li class="products-list-item">
+            <div class="product-image-container">
+              <img src="#" alt="Селфи палка в фиде человеческой руки с держателем для смартфона.">
             </div>
             <div class="product-info-container">
               <h3 class="product-name">Селфи-палка &#171;Следуй за мной&#187;</h3>
-              <div class="product-price">1500 ₽</span>
+              <div class="product-price">1500 ₽</div>
             </div>
           </li>
         </ul>
@@ -227,7 +240,7 @@
           </li>
         </ul>
         <a class="html-academy-link" href="">
-          <img class="#" class="html-academy-logo" alt="Логотип академии.">
+          <img src="#" class="html-academy-logo" alt="Логотип академии.">
         </a>
       </div>
     </footer>
