@@ -3,61 +3,62 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс, каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
       <div class="logo-container">
         <a href="index.html">
-          <img src="images/logo.svg" alt="Логотип." width="145" height="36">
+          <img src="images/header-logo.svg" alt="Логотип." width="145" height="36">
         </a>
       </div>
       <nav>
         <form class="search-form" action="#">
           <fieldset>
-            <input type="text" placeholder="Текст поиска">
-            <button type="submit">Найти</button>
+            <input type="text" class="search-input" placeholder="Текст поиска">
+            <button type="submit" class="search-btn">Найти</button>
           </fieldset>
         </form>
         <ul class="auth-list">
           <li class="auth-list-item">
-            <a href="#" class="profile-link">Коля Петухов</a>
+            <a href="#" class="profile-link text">Коля Петухов</a>
           </li>
           <li class="auth-list-item active-auth-item">
-            <a href="#" class="logout-link">Выйти</a>
+            <a href="#" class="logout-link text">Выйти</a>
           </li>
         </ul>
         <ul class="links-list">
           <li class="links-list-item">
-            <a href="#">Сравнить</a>
+            <a href="#" class="links-list-item-link text">Сравнить</a>
           </li>
           <li class="links-list-item">
-            <a href="#">Корзина</a>
+            <a href="#" class="links-list-item-link text">Корзина</a>
           </li>
         </ul>
       </nav>
       <nav class="main-navigation">
         <div class="main-navigation-catalog-btn">
-          <button type="button" class="catalog-btn">Каталог товаров</button>
+          <button type="button" class="catalog-btn title-2">Каталог товаров</button>
         </div>
         <ul class="main-navigation-list">
           <li class="main-navigation-list-item">
-            <a href="#" class="main-navigation-link">Доставка</a>
+            <a href="#" class="main-navigation-link title-2">Доставка</a>
           </li>
           <li class="main-navigation-list-item">
-            <a href="#" class="main-navigation-link">Гарантия</a>
+            <a href="#" class="main-navigation-link title-2">Гарантия</a>
           </li>
           <li class="main-navigation-list-item">
-            <a href="#" class="main-navigation-link">Контакты</a>
+            <a href="#" class="main-navigation-link title-2">Контакты</a>
           </li>
         </ul>
       </nav>
   </header>
   <main class="main-inner">
     <section class="catalog-header">
-      <h1 class="catalog-title">Моноподы для селфи</h1>
+      <h1 class="catalog-title main-title">Моноподы для селфи</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
-          <a href="index.html" class="breadcrumbs-link">Гланая</a>
+          <a href="index.html" class="breadcrumbs-link">Главная</a>
         </li>
         <li class="breadcrumbs-item">
           <a href="#" class="breadcrumbs-link">Каталог товаров</a>
@@ -71,13 +72,13 @@
       <form class="filters">
           <h2 class="filters-header">Фильтр:</h2>
           <fieldset class="filters-category">
-            <h3 class="filters-category-header">Стоимость</h3>
+            <h3 class="filters-category-header text-bold">Стоимость</h3>
             <div class="slider">тут будет слайдер</div>
-            <input type="number" class="slider-input" id="slider-from-input">
-            <input type="number" class="slider-input" id="slider-to-input">
+            <input type="number" class="slider-input" id="slider-from-input" placeholder="от 0">
+            <input type="number" class="slider-input" id="slider-to-input" placeholder="до 5000">
           </fieldset>
           <fieldset class="filters-category">
-            <h3 class="filters-category-header">Цвет</h3>
+            <h3 class="filters-category-header text-bold">Цвет</h3>
             <ul class="filters-color-list">
               <li class="filters-color-list-item">
                 <span class="visually-hidden">Показать товары черного цвета.</span>
@@ -107,21 +108,21 @@
             </ul>
           </fieldset>
           <fieldset class="filters-category">
-            <h3 class="filters-category-header">Bluetooth</h3>
+            <h3 class="filters-category-header text-bold">Bluetooth</h3>
             <ul class="color-list">
               <li class="color-list-item">
-                <label>
-                  <input type="radio">
-                  Есть
-                </label>
-                <label>
-                  <input type="radio">
-                  Нет
-                </label>
+                <span class="visually-hidden">Показать товары с bluetooth</span>
+                <input type="radio" id="with-bluetooth-radio">
+                <label class="filters-label" for="with-bluetooth-radio">Есть</label>
+              </li>
+              <li class="color-list-item">
+                <span class="visually-hidden">Показать товары без bluetooth</span>
+                <input type="radio" id="without-bluetooth-radio">
+                <label class="filters-label" for="without-bluetooth-radio">Нет</label>
               </li>
             </ul>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button type="submit" class="filters-submit-btn">Показать</button>
         </form>
       <div class="catalog">
         <div class="sort">
@@ -143,7 +144,7 @@
               width="360" height="380">
             </div>
             <div class="product-info-container">
-              <h3 class="product-name">Любительская селфи-палка</h3>
+              <h3 class="product-name text-bold">Любительская селфи-палка</h3>
               <div class="product-price">500 ₽</div>
             </div>
           </li>
@@ -154,7 +155,7 @@
               width="360" height="380">
             </div>
             <div class="product-info-container">
-              <h3 class="product-name">Профессиональная селфи-палка</h3>
+              <h3 class="product-name text-bold">Профессиональная селфи-палка</h3>
               <div class="product-price">1500 ₽</div>
             </div>
           </li>
@@ -165,7 +166,7 @@
               width="360" height="380">
             </div>
             <div class="product-info-container">
-              <h3 class="product-name">Непотопляемая селфи-палка</h3>
+              <h3 class="product-name text-bold">Непотопляемая селфи-палка</h3>
               <div class="product-price">2500 ₽</div>
             </div>
           </li>
@@ -176,12 +177,12 @@
               width="360" height="380">
             </div>
             <div class="product-info-container">
-              <h3 class="product-name">Селфи-палка &#171;Следуй за мной&#187;</h3>
+              <h3 class="product-name text-bold">Селфи-палка &#171;Следуй за мной&#187;</h3>
               <div class="product-price">1500 ₽</div>
             </div>
           </li>
         </ul>
-        <button type="button">Загрузить еще</button>
+        <button type="button" class="load-more-btn">Загрузить еще</button>
         <ol class="pagination-list">
           <li class="pagination-list-item">
             <a href="#" class="pagination-btn">Назад</a>
@@ -214,10 +215,10 @@
         </ol>
       </div>
     </section>
-    <footer>
+    <footer class="page-footer">
       <div class="footer-logo-container">
         <a href="#">
-          <img src="#" alt="Логотип в футере." width="145" height="36">
+          <img src="images/logo.svg" alt="Логотип в футере." width="145" height="36">
         </a>
       </div>
       <nav class="footer-nav">
@@ -237,7 +238,7 @@
           </li>
         </ul>
         <address class="company-contacts">
-          <a href="tel:+7812812-12-12">Тел.: +7 (812) 812-12-12</a>
+          <a href="tel:+7812812-12-12" class="phone-link">Тел.: +7 (812) 812-12-12</a>
         </address>
       </nav>
       <div class="footer-links-container">
@@ -254,7 +255,7 @@
           </li>
         </ul>
         <a class="html-academy-link" href="">
-          <img src="#" class="html-academy-logo" alt="Логотип академии.">
+          <img src="images/academy-logo.svg" class="html-academy-logo" alt="Логотип академии.">
         </a>
       </div>
     </footer>
