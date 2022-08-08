@@ -1,6 +1,5 @@
 @font-face {
   font-family: Raleway;
-  font-style: ExtraBold;
   font-weight: 800;
   src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
   font-display: swap;
@@ -8,7 +7,6 @@
 
 @font-face {
   font-family: Rubik;
-  font-style: Regular;
   font-weight: 400;
   src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
   font-display: swap;
@@ -16,22 +14,33 @@
 
 @font-face {
   font-family: Rubik;
-  font-style: Regular;
   font-weight: 700;
   src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
   font-display: swap;
 }
 
 body {
+  margin: 0;
+  min-width: 1200px;
+}
 
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 a {
   text-decoration: none;
 }
 
+fieldset {
+  border: none;
+  padding: 0;
+}
+
 .page-header {
-  background: linear-gradient(#FFFFFF 22px, #FFE17F 22px)
+  background: linear-gradient(#FFFFFF 22px, #FFE17F 22px);
+  padding: 0 60px;
 }
 
 .main-navigation-link {
@@ -64,10 +73,12 @@ a {
 
 .slider-item-about-link {
   font-family: Raleway;
-  font-style: ExtraBold;
+  font-weight: 800;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
 }
 
 .characteristic-value {
@@ -87,18 +98,21 @@ a {
 
 .categories-list-link {
   font-family: Raleway;
-  font-style: ExtraBold;
+  font-weight: 800;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
+  letter-spacing: -0.3px;
 }
 
 .benefits-list-link {
   font-family: Raleway;
-  font-style: ExtraBold;
+  font-weight: 800;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 3.2px;
 }
 
 .benefits-list-item.active .benefits-list-link {
@@ -115,44 +129,55 @@ a {
 
 .delivery-link {
   font-family: Raleway;
-  font-style: ExtraBold;
+  font-weight: 800;
   font-size: 20px;
   line-height: 23px;
+  text-transform: uppercase;
+  letter-spacing: 3.2px;
+  color: #000000;
 }
 
 .main-title {
   font-family: Raleway;
-  font-style: ExtraBold;
+  font-weight: 800;
   font-size: 50px;
   line-height: 50px;
 }
 
 .text-bold {
   font-family: Rubik;
-  font-style: Bold;
+  font-weight: bold;
   font-size: 18px;
   line-height: 20px;
+  letter-spacing: -0.3px;
 }
 
 .about-us-link {
   font-family: Raleway;
-  font-style: ExtraBold;
+  font-weight: 800;
   font-size: 18px;
   line-height: 21px;
+  text-transform: uppercase;
+  letter-spacing: 3.2px;
+  color: #000000;
 }
 
 .title-3 {
   font-family: Rubik;
-  font-style: Bold;
+  font-weight: bold;
   font-size: 24px;
   line-height: 30px;
+  color: #444444;
 }
 
 .write-us-link {
   font-family: Raleway;
-  font-style: ExtraBold;
+  font-weight: 800;
   font-size: 18px;
   line-height: 21px;
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 3.2px;
 }
 
 .subscribe-email-input {
@@ -169,10 +194,12 @@ a {
 
 .subscribe-btn {
   font-family: Raleway;
-  font-style: ExtraBold;
+  font-weight: 800;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
 }
 
 .company-address {
@@ -194,17 +221,21 @@ a {
 
 .title-2 {
   font-family: Raleway;
-  font-style: ExtraBold;
+  font-weight: 800;
   font-size: 18px;
   line-height: 21px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
 }
 
 .footer-navigation-link {
   color:#FFFFFF;
   font-family: Raleway;
-  font-style: ExtraBold;
+  font-weight: 800;
   font-size: 18px;
   line-height: 21px;
+  text-transform: uppercase;
+  letter-spacing: 3.2px;
 }
 
 .breadcrumbs-link {
@@ -217,9 +248,11 @@ a {
 
 .filters-header, .sort-header {
   font-family: Raleway;
-  font-style: ExtraBold;
+  font-weight: 800;
   font-size: 16px;
   line-height: 19px;
+  text-transform: uppercase;
+  letter-spacing: 3.2px;
 }
 
 .slider-input {
@@ -238,7 +271,7 @@ a {
 
 .filters-submit-btn {
   font-family: Raleway;
-  font-style: ExtraBold;
+  font-weight: 800;
   font-size: 18px;
   line-height: 21px;
 }
@@ -259,22 +292,26 @@ a {
 
 .load-more-btn {
   font-family: Raleway;
-  font-style: ExtraBold;
+  font-weight: 800;
   font-size: 16px;
   line-height: 19px;
+  text-transform: uppercase;
+  letter-spacing: 3.2px;
 }
 
 .pagination-btn {
   font-family: Raleway;
-  font-style: ExtraBold;
+  font-weight: 800;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 3.2px;
 }
 
 .pagination-link {
   font-family: Raleway;
-  font-style: ExtraBold;
+  font-weight: 800;
   font-size: 18px;
   line-height: 21px;
   text-decoration: none;
