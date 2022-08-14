@@ -6,55 +6,57 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header container catalog-header">
       <div class="logo-container">
         <a href="index.html">
           <img src="images/header-logo.svg" alt="Логотип." width="145" height="36">
         </a>
       </div>
-      <nav>
-        <form class="search-form" action="#">
-          <fieldset>
-            <input type="text" class="search-input" placeholder="Текст поиска">
-            <button type="submit" class="search-btn">Найти</button>
-          </fieldset>
-        </form>
-        <ul class="auth-list">
-          <li class="auth-list-item">
-            <a href="#" class="profile-link text">Коля Петухов</a>
-          </li>
-          <li class="auth-list-item active-auth-item">
-            <a href="#" class="logout-link text">Выйти</a>
-          </li>
-        </ul>
-        <ul class="links-list">
-          <li class="links-list-item">
-            <a href="#" class="links-list-item-link text">Сравнить</a>
-          </li>
-          <li class="links-list-item">
-            <a href="#" class="links-list-item-link text">Корзина</a>
-          </li>
-        </ul>
-      </nav>
       <nav class="main-navigation">
-        <div class="main-navigation-catalog-btn">
-          <button type="button" class="catalog-btn title-2">Каталог товаров</button>
+        <div class="user-navigation">
+          <form class="search-form" action="#">
+            <fieldset>
+              <input type="text" class="search-input" placeholder="Текст поиска">
+              <button type="submit" class="search-btn">Найти</button>
+            </fieldset>
+          </form>
+          <ul class="auth-list">
+            <li class="auth-list-item">
+              <a href="#" class="profile-link text">Коля Петухов</a>
+            </li>
+            <li class="auth-list-item active-auth-item">
+              <a href="#" class="logout-link text">Выйти</a>
+            </li>
+          </ul>
+          <ul class="links-list">
+            <li class="links-list-item">
+              <a href="#" class="links-list-item-link text">Сравнить</a>
+            </li>
+            <li class="links-list-item">
+              <a href="#" class="links-list-item-link text">Корзина</a>
+            </li>
+          </ul>
         </div>
-        <ul class="main-navigation-list">
-          <li class="main-navigation-list-item">
-            <a href="#" class="main-navigation-link title-2">Доставка</a>
-          </li>
-          <li class="main-navigation-list-item">
-            <a href="#" class="main-navigation-link title-2">Гарантия</a>
-          </li>
-          <li class="main-navigation-list-item">
-            <a href="#" class="main-navigation-link title-2">Контакты</a>
-          </li>
-        </ul>
+        <div class="site-navigation">
+          <div class="main-navigation-catalog-btn">
+            <button type="button" class="catalog-btn title-2">Каталог товаров</button>
+          </div>
+          <ul class="main-navigation-list">
+            <li class="main-navigation-list-item">
+              <a href="#" class="main-navigation-link title-2">Доставка</a>
+            </li>
+            <li class="main-navigation-list-item">
+              <a href="#" class="main-navigation-link title-2">Гарантия</a>
+            </li>
+            <li class="main-navigation-list-item">
+              <a href="#" class="main-navigation-link title-2">Контакты</a>
+            </li>
+          </ul>
+        </div>
       </nav>
   </header>
   <main class="main-inner">
-    <section class="catalog-header">
+    <section class="catalog-header container">
       <h1 class="catalog-title main-title">Моноподы для селфи</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
@@ -69,7 +71,8 @@
       </ul>
     </section>
     <section class="catalog-products">
-      <form class="filters">
+      <div class="container catalog-products-container">
+        <form class="filters">
           <h2 class="filters-header">Фильтр:</h2>
           <fieldset class="filters-category">
             <h3 class="filters-category-header text-bold">Стоимость</h3>
@@ -124,139 +127,154 @@
           </fieldset>
           <button type="submit" class="filters-submit-btn">Показать</button>
         </form>
-      <div class="catalog">
-        <div class="sort">
-            <h2 class="sort-header">Сортировка:</h2>
-            <select class="select-control">
-              <option selected>Популярные</option>
-            </select>
-            <div class="sort-order-btns">
-              <h3 class="visually-hidden">Порядок сортировки</h3>
-              <button class="sort-asc-icon">Сортировка по возрастанию</button>
-              <button class="sort-desc-icon">Сортировка по убыванию</button>
-            </div>
-        </div>
-        <ul class="products-list">
-          <li class="products-list-item">
-            <div class="product-image-container">
-              <img src="images/amateut-selfie-stick.jpg"
-              alt="Обычная селфи-палка с прикрепленным к ней смартфоном."
-              width="360" height="380">
-            </div>
-            <div class="product-info-container">
-              <h3 class="product-name text-bold">Любительская селфи-палка</h3>
-              <div class="product-price">500 ₽</div>
-            </div>
-          </li>
-          <li class="products-list-item">
-            <div class="product-image-container">
-              <img src="images/professional-selfie-stick.jpg"
-              alt="Профессиональная селфи-палка большого диаметра и с хорошим держателем для фото-устройства."
-              width="360" height="380">
-            </div>
-            <div class="product-info-container">
-              <h3 class="product-name text-bold">Профессиональная селфи-палка</h3>
-              <div class="product-price">1500 ₽</div>
-            </div>
-          </li>
-          <li class="products-list-item">
-            <div class="product-image-container">
-              <img src="images/unsinkable-selfie-stick.jpg"
-              alt="Водонепроницаемая селфи-палка с ремешком для крепления на руке."
-              width="360" height="380">
-            </div>
-            <div class="product-info-container">
-              <h3 class="product-name text-bold">Непотопляемая селфи-палка</h3>
-              <div class="product-price">2500 ₽</div>
-            </div>
-          </li>
-          <li class="products-list-item">
-            <div class="product-image-container">
-              <img src="images/follow-me-selfie-stick .jpg"
-              alt="Селфи палка в фиде человеческой руки с держателем для смартфона."
-              width="360" height="380">
-            </div>
-            <div class="product-info-container">
-              <h3 class="product-name text-bold">Селфи-палка &#171;Следуй за мной&#187;</h3>
-              <div class="product-price">1500 ₽</div>
-            </div>
-          </li>
-        </ul>
-        <button type="button" class="load-more-btn">Загрузить еще</button>
-        <ol class="pagination-list">
-          <li class="pagination-list-item">
-            <a href="#" class="pagination-btn">Назад</a>
-          </li>
-          <li>
-            <ul class="pagination">
-              <li class="pagination-item pagination-current-item">
-                <a href="#" class="pagination-link">1</a>
+        <div class="catalog">
+          <div class="sort">
+              <h2 class="sort-header">Сортировка:</h2>
+              <select class="select-control">
+                <option selected>Популярные</option>
+              </select>
+              <div class="sort-order-btns">
+                <h3 class="visually-hidden">Порядок сортировки</h3>
+                <button class="sort-asc-icon">
+                  <span class="visually-hidden">Сортировка по возрастанию</span>
+                </button>
+                <button class="sort-desc-icon">
+                  <span class="visually-hidden">Сортировка по убыванию</span>
+                </button>
+              </div>
+          </div>
+          <div class="products-container">
+            <ul class="products-list">
+              <li class="products-list-item">
+                <div class="product-image-container">
+                  <img src="images/amateut-selfie-stick.jpg"
+                  alt="Обычная селфи-палка с прикрепленным к ней смартфоном."
+                  width="360" height="380">
+                </div>
+                <div class="product-info-container">
+                  <h3 class="product-name text-bold">Любительская селфи-палка</h3>
+                  <div class="product-price">500 ₽</div>
+                </div>
               </li>
-              <li class="pagination-item">
-                <a href="#" class="pagination-link">2</a>
+              <li class="products-list-item">
+                <div class="product-image-container">
+                  <img src="images/professional-selfie-stick.jpg"
+                  alt="Профессиональная селфи-палка большого диаметра и с хорошим держателем для фото-устройства."
+                  width="360" height="380">
+                </div>
+                <div class="product-info-container">
+                  <h3 class="product-name text-bold">Профессиональная селфи-палка</h3>
+                  <div class="product-price">1500 ₽</div>
+                </div>
               </li>
-              <li class="pagination-item">
-                <a href="#" class="pagination-link">3</a>
+              <li class="products-list-item">
+                <div class="product-image-container">
+                  <img src="images/unsinkable-selfie-stick.jpg"
+                  alt="Водонепроницаемая селфи-палка с ремешком для крепления на руке."
+                  width="360" height="380">
+                </div>
+                <div class="product-info-container">
+                  <h3 class="product-name text-bold">Непотопляемая селфи-палка</h3>
+                  <div class="product-price">2500 ₽</div>
+                </div>
               </li>
-              <li class="pagination-item">
-                <a href="#" class="pagination-link">4</a>
-              </li>
-              <li class="pagination-item">
-                <a href="#" class="pagination-link">...</a>
-              </li>
-              <li class="pagination-item">
-                <a href="#" class="pagination-link">15</a>
+              <li class="products-list-item">
+                <div class="product-image-container">
+                  <img src="images/follow-me-selfie-stick.jpg"
+                  alt="Селфи палка в фиде человеческой руки с держателем для смартфона."
+                  width="360" height="380">
+                </div>
+                <div class="product-info-container">
+                  <h3 class="product-name text-bold">Селфи-палка &#171;Следуй за мной&#187;</h3>
+                  <div class="product-price">1500 ₽</div>
+                </div>
               </li>
             </ul>
-          </li>
-          <li>
-            <a href="#" class="pagination-btn">Вперед</a>
-          </li>
-        </ol>
+            <button type="button" class="load-more-btn">Загрузить еще</button>
+            <ol class="pagination-list">
+              <li class="pagination-list-item">
+                <a href="#" class="pagination-btn">Назад</a>
+              </li>
+              <li>
+                <ul class="pagination">
+                  <li class="pagination-item pagination-current-item">
+                    <a href="#" class="pagination-link">1</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-link">2</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-link">3</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-link">4</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-link">...</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a href="#" class="pagination-link">15</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="pagination-btn">Вперед</a>
+              </li>
+            </ol>
+          </div>
+        </div>
       </div>
     </section>
     <footer class="page-footer">
-      <div class="footer-logo-container">
-        <a href="#">
-          <img src="images/logo.svg" alt="Логотип в футере." width="145" height="36">
-        </a>
-      </div>
-      <nav class="footer-nav">
-        <address class="company-address">
-          Санкт-Петербург, набережная
-          реки Карповки, 5, литера П.
-        </address>
-        <ul class="footer-navigation-list">
-          <li class="footer-navigation-list-item">
-            <a href="#" class="footer-navigation-link">Доставка</a>
-          </li>
-          <li class="footer-navigation-list-item">
-            <a href="#" class="footer-navigation-link">Гарантия</a>
-          </li>
-          <li class="footer-navigation-list-item">
-            <a href="#" class="footer-navigation-link">Контакты</a>
-          </li>
-        </ul>
-        <address class="company-contacts">
-          <a href="tel:+7812812-12-12" class="phone-link">Тел.: +7 (812) 812-12-12</a>
-        </address>
-      </nav>
-      <div class="footer-links-container">
-        <div class="decorative-line"></div>
-        <ul class="social-networks-list">
-          <li class="social-network-list-item">
-            <a class="social-network-telegram">telegram</a>
-          </li>
-          <li class="social-network-list-item">
-            <a class="social-network-youtube">youtube</a>
-          </li>
-          <li class="social-network-list-item">
-            <a class="social-network-twitter">twitter</a>
-          </li>
-        </ul>
-        <a class="html-academy-link" href="">
-          <img src="images/academy-logo.svg" class="html-academy-logo" alt="Логотип академии.">
-        </a>
+      <div class="container">
+        <div class="footer-logo-container">
+          <a href="#">
+            <img src="images/logo.svg" alt="Логотип в футере." width="145" height="36">
+          </a>
+        </div>
+        <nav class="footer-nav">
+          <address class="company-address">
+            Санкт-Петербург, набережная
+            реки Карповки, 5, литера П.
+          </address>
+          <ul class="footer-navigation-list">
+            <li class="footer-navigation-list-item">
+              <a href="#" class="footer-navigation-link">Доставка</a>
+            </li>
+            <li class="footer-navigation-list-item">
+              <a href="#" class="footer-navigation-link">Гарантия</a>
+            </li>
+            <li class="footer-navigation-list-item">
+              <a href="#" class="footer-navigation-link">Контакты</a>
+            </li>
+          </ul>
+          <address class="company-contacts">
+            <a href="tel:+7812812-12-12" class="phone-link">Тел.: +7 (812) 812-12-12</a>
+          </address>
+        </nav>
+        <div class="footer-links-container">
+          <div class="decorative-line"></div>
+          <ul class="social-networks-list">
+            <li class="social-network-list-item telegram">
+              <a class="social-network-telegram">
+                <span class="visually-hidden">telegram</span>
+              </a>
+            </li>
+            <li class="social-network-list-item youtube">
+              <a class="social-network-youtubee">
+                <span class="visually-hidden">youtube</span>
+              </a>
+            </li>
+            <li class="social-network-list-item twitter">
+              <a class="social-network-twitter">
+                <span class="visually-hidden">twitter</span>
+              </a>
+            </li>
+          </ul>
+          <a class="html-academy-link" href="">
+            <img src="images/academy-logo.svg" class="html-academy-logo" alt="Логотип академии.">
+          </a>
+        </div>
       </div>
     </footer>
   </main>
