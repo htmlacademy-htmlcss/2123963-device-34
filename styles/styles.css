@@ -1,21 +1,21 @@
 @font-face {
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-weight: 800;
-  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  src: url('../fonts/raleway/raleway-800.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Rubik";
+  font-family: 'Rubik';
   font-weight: 400;
-  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  src: url('../fonts/rubik/rubik-400.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Rubik";
+  font-family: 'Rubik';
   font-weight: 700;
-  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  src: url('../fonts/rubik/rubik-700.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -86,6 +86,10 @@ body {
   border: solid 2px #AF4FFF;
 }
 
+.main-navigation-catalog-btn {
+  position: relative;
+}
+
 .catalog-btn {
   background: transparent;
   display: flex;
@@ -118,21 +122,117 @@ body {
   background-image: url('../images/minus-icon.svg');
 }
 
+.catalog-btn:hover~.dropdown-display-container, .dropdown-display-container:hover {
+  display: flex;
+}
+
 .catalog-btn:focus-visible {
   border-color: #AF4FFF;
 }
 
-.login-link, .links-list-item-link {
+/*Стили повляющегся меню с категориями товаров*/
+.catalog-menu-dropdown {
+  display: flex;
+  position: absolute;
+  width: 1160px;
+  left: -59px;
+  z-index: 2;
+  top: 28px;
+  padding-top: 40px;
+
+}
+
+.dropdown-display-container {
+  display: none;
+}
+
+.catalog-main-list {
+  margin: 0;
+  padding: 0 0 39px 0;
+  list-style: none;
+  background-color: #FFE17F;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.catalog-sublist {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 212px;
+}
+
+.catalog-main-item {
+  margin-right: 30px;
+  width: 202px;
+}
+
+.catalog-main-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.catalog-main-item:first-child {
+  padding-left: 60px;
+  width: 242px;
+}
+
+.catalog-sublist-item {
+  margin-bottom: 18px;
+}
+
+.catalog-sublist-link {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+  text-decoration: none;
+  position: relative;
+}
+
+.catalog-sublist-link:hover {
+  opacity: 0.6;
+}
+
+.catalog-sublist-link:active {
+  opacity: 0.3;
+}
+
+.catalog-sublist-link:focus {
+  outline: none;
+}
+
+.catalog-sublist-link:focus::before {
+  content: "";
+  top: -4px;
+  left: -4px;
+  position: absolute;
+  box-sizing: border-box;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border: 2px solid #AF4FFF;
+}
+
+.login-link,
+.links-list-item-link {
   display: flex;
   align-items: baseline;
 }
 
-.login-link.text, .links-list-item-link.text, .profile-link.text {
+.login-link.text,
+.links-list-item-link.text,
+.profile-link.text {
   color: #000000;
   text-decoration: none;
 }
 
-.links-list-item-link::before, .login-link::before {
+.links-list-item-link::before,
+.login-link::before {
   display: inline-block;
   content: '';
   background-repeat: no-repeat;
@@ -227,14 +327,15 @@ body {
   margin-right: 18px;
 }
 
-.search-input, .search-btn {
-  font-family: Rubik, sans-serif;
+.search-input,
+.search-btn {
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-size: 16px;
   line-height: 20px;
   color: #000000;
   box-sizing: border-box;
-  height: 40px;
+  min-height: 40px;
   background-color: transparent;
   border: solid 2px #000000;
   outline: none;
@@ -264,9 +365,11 @@ body {
   width: 359px;
   border-radius: 50px 0 0 50px;
   text-indent: 32px;
+  height: 100%;
 }
 
-.search-input:disabled, .search-btn:disabled {
+.search-input:disabled,
+.search-btn:disabled {
   opacity: 30%;
 }
 
@@ -277,8 +380,9 @@ body {
   position: relative;
 }
 
-.search-btn:hover, search-btn:active {
-  background-color:#000000;
+.search-btn:hover,
+search-btn:active {
+  background-color: #000000;
 }
 
 .search-btn:hover {
@@ -352,7 +456,7 @@ body {
 }
 
 .slider-item-info-description {
-  font-family: Rubik, sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 18px;
   line-height: 30px;
   margin: 0;
@@ -369,14 +473,15 @@ body {
   display: none;
 }
 
-.slider-item-container.active{
+.slider-item-container.active {
   position: relative;
   display: flex;
 }
 
 .slider-item-container::before {
-  counter-increment: slider-item-counter; /* Указываем идентификатор счетчика */
-  font-family: Rubik, sans-serif;
+  counter-increment: slider-item-counter;
+  /* Указываем идентификатор счетчика */
+  font-family: 'Rubik', sans-serif;
   font-weight: bold;
   font-size: 180px;
   line-height: 30px;
@@ -400,7 +505,7 @@ body {
 }
 
 .slider-item-container:nth-child(-n+9)::before {
-  content: '0' counter(slider-item-counter);
+  content: '0'counter(slider-item-counter);
 }
 
 .slider-item-container:nth-child(n+10)::before {
@@ -408,7 +513,7 @@ body {
 }
 
 .slider-item-indo-description {
-  font-family: Rubik, sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-size: 18px;
   line-height: 30px;
@@ -417,7 +522,7 @@ body {
 }
 
 .slider-item-about-link {
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
@@ -472,7 +577,7 @@ body {
 }
 
 .slider-pagination-btn.active {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 .slider-pagination-btn:hover {
@@ -498,7 +603,7 @@ body {
 }
 
 .characteristic-value {
-  font-family: Rubik, sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-size: 36px;
   line-height: 30px;
@@ -506,7 +611,7 @@ body {
 }
 
 .characteristic-name {
-  font-family: Rubik, sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-size: 16px;
   line-height: 30px;
@@ -529,7 +634,7 @@ body {
 }
 
 .categories-list-link {
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
@@ -618,7 +723,7 @@ body {
 }
 
 .benefits-list-link {
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
@@ -708,13 +813,13 @@ body {
 }
 
 .benefits-list-item.active:focus-within:before {
-    content: '';
-    position: absolute;
-    border: solid 2px #AF4FFF;
-    top: -4px;
-    left: -4px;
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
+  content: '';
+  position: absolute;
+  border: solid 2px #AF4FFF;
+  top: -4px;
+  left: -4px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
 }
 
 .benefits-info-list-item-header {
@@ -732,7 +837,7 @@ body {
 }
 
 .text {
-  font-family: Rubik, sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-size: 18px;
   line-height: 30px;
@@ -751,11 +856,11 @@ body {
   position: relative;
 }
 
-.delivery-link-container:hover .delivery-link::before{
+.delivery-link-container:hover .delivery-link::before {
   background-color: #FFC700;
 }
 
-.delivery-link-container:active{
+.delivery-link-container:active {
   opacity: 30%;
 }
 
@@ -778,7 +883,7 @@ body {
 }
 
 .delivery-link {
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 20px;
   line-height: 23px;
@@ -795,8 +900,8 @@ body {
 
 .delivery-link::before {
   content: '';
-  width: 125px;
-  height: 100px;
+  min-width: 125px;
+  height: 100%;
   background-color: #FFE17F;
   display: inline-block;
   background-image: url('../images/car-icon.svg');
@@ -806,6 +911,7 @@ body {
 }
 
 .delivery-link-text {
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -835,14 +941,14 @@ body {
 }
 
 .main-title {
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
 }
 
 .text-bold {
-  font-family: Rubik, sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -872,7 +978,7 @@ body {
 }
 
 .about-us-link {
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
@@ -912,7 +1018,8 @@ body {
   list-style: none;
 }
 
-.about-info-companies-list, .working-hours-list {
+.about-info-companies-list,
+.working-hours-list {
   padding: 0;
   margin-top: 0;
   margin-bottom: 40px;
@@ -932,7 +1039,7 @@ body {
 }
 
 .title-3 {
-  font-family: Rubik, sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
@@ -941,7 +1048,7 @@ body {
 }
 
 .write-us-link {
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
@@ -955,7 +1062,11 @@ body {
 
 .subscribe {
   background-color: #F0F0F0;
-  padding: 64px 133px 56px 147px;
+  padding: 64px 0 56px;
+}
+
+.subscribe-container {
+  padding-left: 7px;
 }
 
 .subscribe-header {
@@ -985,7 +1096,7 @@ body {
 }
 
 .subscribe-email-input {
-  font-family: Rubik, sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-size: 18px;
   line-height: 30px;
@@ -1012,7 +1123,7 @@ body {
 }
 
 .subscribe-btn {
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
@@ -1025,16 +1136,17 @@ body {
   position: relative;
 }
 
-.subscribe-btn:active, .subscribe-btn:hover {
+.subscribe-btn:active,
+.subscribe-btn:hover {
   background-color: #000000;
 }
 
-.subscribe-btn:hover{
+.subscribe-btn:hover {
   color: #FFFFFF;
 }
 
-.subscribe-btn:active{
-  color:rgba(255, 255, 255, 0.3)
+.subscribe-btn:active {
+  color: rgba(255, 255, 255, 0.3)
 }
 
 .subscribe-btn:disabled {
@@ -1069,7 +1181,7 @@ body {
 }
 
 .company-address {
-  font-family: Rubik, sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-size: 16px;
   line-height: 20px;
@@ -1079,7 +1191,7 @@ body {
 }
 
 .title-2 {
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
@@ -1095,19 +1207,20 @@ body {
   grid-column-gap: 32px;
 }
 
-.footer-navigation-list, .social-networks-list {
+.footer-navigation-list,
+.social-networks-list {
   list-style: none;
   justify-content: center;
   margin: 0;
   padding: 0;
 }
 
-.social-networks-list  {
+.social-networks-list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.social-network-list-item  {
+.social-network-list-item {
   margin-right: 2px;
   margin-bottom: 10px;
 }
@@ -1160,7 +1273,8 @@ body {
   background-image: url('../images/twitter.svg');
 }
 
-.social-button:hover::before, .social-button:active::before {
+.social-button:hover::before,
+.social-button:active::before {
   background-color: #FFC700;
 }
 
@@ -1177,7 +1291,7 @@ body {
 }
 
 .footer-navigation-link {
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
@@ -1188,7 +1302,7 @@ body {
 }
 
 .phone-link {
-  font-family: Rubik, sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-size: 16px;
   line-height: 20px;
@@ -1201,11 +1315,13 @@ body {
   border: solid 2px transparent;
 }
 
-.footer-link:hover, .footer-link:active {
+.footer-link:hover,
+.footer-link:active {
   color: #FFC700;
 }
 
-.footer-navigation-link:hover, .footer-link:active {
+.footer-navigation-link:hover,
+.footer-link:active {
   border-bottom: solid 2px #FFC700;
   padding-bottom: 4px;
 }
@@ -1248,7 +1364,7 @@ body {
 }
 
 .breadcrumbs-link {
-  font-family: Rubik, sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-size: 16px;
   line-height: 19px;
@@ -1276,8 +1392,9 @@ body {
   justify-content: space-between;
 }
 
-.filters-header, .sort-header {
-  font-family: Raleway, sans-serif;
+.filters-header,
+.sort-header {
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
@@ -1290,13 +1407,13 @@ body {
 }
 
 .slider-input {
-  font-family: Rubik, sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-size: 15px;
   line-height: 18px;
 }
 
-.filters-category  {
+.filters-category {
   padding-top: 12px;
 }
 
@@ -1307,21 +1424,21 @@ body {
 }
 
 .filters-label {
-  font-family: Rubik, sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
-  Font-size: 16px;
+  font-size: 16px;
   line-height: 19px;
 }
 
 .filters-submit-btn {
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
 }
 
 .select-control {
-  font-family: Rubik, sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-size: 18px;
   line-height: 30px;
@@ -1350,14 +1467,14 @@ body {
 }
 
 .product-price {
-  font-family: Rubik, sans-serif;
-  Font-style: normal;
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
   font-size: 18px;
   line-height: 21px;
 }
 
 .load-more-btn {
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
@@ -1370,7 +1487,7 @@ body {
 }
 
 .pagination-btn {
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
@@ -1380,7 +1497,7 @@ body {
 }
 
 .pagination-link {
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
